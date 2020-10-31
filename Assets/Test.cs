@@ -24,18 +24,17 @@ public class Boss
     // 魔法攻撃用の関数（発展課題）
     public void Magic()
     {
-        // MPを5消費する
-        this.mp -= 5;
-
-        // 魔法攻撃後のMP情報を表示する
-        if (this.mp >= 0)
+        // MPが5以上ある場合に魔法攻撃をする
+        if (this.mp >= 5)
         {
-            // 残りMPが0以上の場合
+            // MPを5消費する
+            this.mp -= 5;
+            // 残りMPを表示する
             Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
         }
         else
         {
-            // 残りMPが足りない場合
+            // 残りMPが足りない場合に表示する
             Debug.Log("MPが足りないため魔法が使えない");
         }
     }
